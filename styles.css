@@ -74,6 +74,17 @@ div.block1{
     width: 800px;
 }
 
+section.block2.main{
+    display: flex;
+    flex-direction: column;
+}
+
+.block2.title{
+    margin-right: auto;
+    margin-left: 100px;
+
+}
+
 .block2{
     background-color: yellow;
     padding: 50px;
@@ -148,6 +159,8 @@ div.block1{
 .block3.main{
     background-color: orange;
     padding: 50px;
+    align-items: center;
+    justify-content: center;
 }
 
 .block3.title{
@@ -158,10 +171,13 @@ div.block1{
 }
 
 .block3.content{
-    display: flex;
-    flex-direction: row;
+    display: grid;
     align-items: center;
     justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 15px;
+    row-gap: 10px;
+    width: 1200px;
 }
 
 .block3.contentContainer{
@@ -169,10 +185,36 @@ div.block1{
     width: 250px;
     align-items: center;
     justify-content: center;
-    padding: 25px;
+    padding: 10px;
 }
 
 figure{
     justify-content: center;
     align-items: center;
+}
+
+.block4.main{
+    padding: 50px;
+    background-color: skyblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.block4.content{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 15px;
+    row-gap: 10px;
+    
+}
+
+footer{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 50px;
+    align-items: center;    
+    justify-content: center;
 }
