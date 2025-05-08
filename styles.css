@@ -1,0 +1,118 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+.topbar{
+    display: sticky;
+    background-color: red;
+    top: 0;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.topbarContent{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    margin: 5px;
+}
+
+.name{
+    padding: 0px;
+    margin: 0px;
+}
+
+.topbarContent.Right{
+    margin-left: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.night{
+    color: red;
+}
+
+section.block1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+div.block1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 20px;
+    padding: 20px;
+}
+
+.block1.Center{
+    flex-direction: column;
+}
+
+.blockContent{
+    align-items: center;
+    justify-content: center;
+}
+
+.block2.container{
+    border:2px solid black;
+    
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 800px;
+}
+
+.block2{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.block2.btnContainer{
+    padding-top: -20px;
+    margin-top: -20px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50% ;
+    margin: 20px;
+    padding: 20px;
+}
+
+.block2.educ{
+    
+    border:2px solid black;
+    padding:10px   ;
+}
+
+.block2.work{
+    border:2px solid black;
+    padding:10px   ;
+}
+
+.block2.line{
+    width: 30%;
+    padding: 2.5px;
+    margin: 2.5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+}
+
+.circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: blue;
+    align-self: center;
+}
