@@ -3,14 +3,14 @@
     margin: 0px;
 }
 
-.topbar{
-    display: sticky;
-    background-color: red;
-    top: 0;
+.topbar {
+    position: sticky; 
+    background-color: #2f5233;
+    top: 0; 
     width: 100%;
-    padding: 0px;
-    margin: 0px;
+    padding: 10px;
     box-sizing: border-box;
+    z-index: 1000; 
 }
 
 .topbarContent{
@@ -18,7 +18,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 5px;
-    margin: 5px;
+    
 }
 
 .name{
@@ -41,7 +41,7 @@ section.block1{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: green;
+    background-color: #76b947;
     padding: 50px;
 }
 
@@ -55,13 +55,51 @@ div.block1{
     padding: 20px;
 }
 
-.block1.Center{
+.meContainer{
+    display: flex;
+    flex-direction: row;
+}
+
+.meContainer.text{
+    padding-right: 50px;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
     flex-direction: column;
 }
+
+.meContainer.text>h1{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.meContainer.text>h2{
+    padding-bottom: 30px;
+}
+
+
+.block1.Center{
+    position: relative;
+    display: flex;
+    z-index: 10;
+    flex-direction: column;
+}
+
+
 
 .blockContent{
     align-items: center;
     justify-content: center;
+}
+
+
+hr.block2 {
+    border: none;
+    height: 2px;
+    margin: 0;
+    padding: 0px;
+    width: 100%;
+    background-color: black;
 }
 
 .block2.container{
@@ -80,13 +118,15 @@ section.block2.main{
 }
 
 .block2.title{
+    display: flex;
+    flex-direction: column;
     margin-right: auto;
     margin-left: 100px;
 
 }
 
 .block2{
-    background-color: yellow;
+    background-color: #b1d8b7;
     padding: 50px;
     display: flex;
     align-items: center;
@@ -133,18 +173,31 @@ section.block2.main{
 .block2.content{
     height: 200px;
     margin: 10px;
-    overflow-y: auto;
-    
+    overflow-y: auto;    
     padding: 10px;
     display: flex;
     flex-direction: column;
+    scrollbar-color: rgba(0, 0, 0, 0.5) transparent; /* Thumb color and track color */
+    scrollbar-width: thin; /* Makes the scrollbar thinner */
 }
 
+.block2.content::-webkit-scrollbar {
+    width: 5px; 
+}
+.block2.content::-webkit-scrollbar-track {
+    background: transparent; 
+}
+.block2.content::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.5); 
+    border-radius: 10px; 
+}
+
+
 .block2.contentContainer{
-    height: inherit;
-   
-    padding: 10px;
-    
+    height: inherit;    
+    height: 200px;  
+    margin: 0px;   
+    padding: 5px;
 }
 
 .line.content{
@@ -157,7 +210,7 @@ section.block2.main{
 }
 
 .block3.main{
-    background-color: orange;
+    background-color: #94c973;
     padding: 50px;
     align-items: center;
     justify-content: center;
@@ -195,7 +248,7 @@ figure{
 
 .block4.main{
     padding: 50px;
-    background-color: skyblue;
+    background-color: #ecf87f;
     display: flex;
     flex-direction: column;
     align-items: center;
