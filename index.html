@@ -13,26 +13,24 @@
                 <h1 class="name">Vince Lawrence Baraclan</h1>
             </div>
             <div class="topbarContent Right">
-                <div class="topbarContent item">
+                <div class="topbarContent item" onclick="scrollToSection('block1')">
+                    About Me
+                </div>
+                <div class="topbarContent item" onclick="scrollToSection('block2')">
+                    Work Experiences
+                </div>
+                <div class="topbarContent item" onclick="scrollToSection('block3')">
                     Skills
                 </div>
-                <div class="topbarContent item">
-                    Portfolio
+                <div class="topbarContent item" onclick="scrollToSection('block4')">
+                    Projects
                 </div>
-                <div class="topbarContent item">
-                    Work Experience
-                </div>
-                <div class="topbarContent darkmode">
-                    <button class="night">
-                        <img src="Assets/night mode.png" alt="">
-                    </button>
-                </div>
+                
             </div>
         </div>
     </div>
     <main>
-        <section class="block1 main">
-            
+        <section class="block1 main" id="block1">       
                 
             <div class="block1 Center">
                 <div class="meContainer">
@@ -50,7 +48,7 @@
             
             
         </section>
-        <section class="block2 main">
+        <section class="block2 main" id="block2">
             <div class="block2 title">
                 <h1>Work Experiences</h1>
                 <hr class="block2">
@@ -60,7 +58,7 @@
                     <div class="block2 educ" onclick="educButtonChange(this)">Education</div>
                     <div class="block2 work" onclick="workButtonChange(this)">Work Experiences</div>
                 </div>
-                <div class="block2 content">
+                <div class="block2 content" onload="educButtonChange(this)">
                     <div class="block2 contentContainer" id="A1">
                         <div class="block2 line">
                             <div class="circle"></div>
@@ -126,7 +124,7 @@
                 
             </div>
         </section>
-        <section class="block3 main">
+        <section class="block3 main" id="block3">
             <div class="block3 title">
                 <h1>Skills</h1>
             </div>
@@ -223,7 +221,7 @@
                 </div>
             </div>
         </section>
-        <section class="block4 main">
+        <section class="block4 main" id="block4">
             <div class="block4 title ">
                 <h1>Projects</h1>
             </div>

@@ -6,12 +6,13 @@
     
     .topbar {
         position: sticky; 
-        background-color: #2f5233;
+        background-color: #070707;
         top: 0; 
         width: 100%;
         padding: 10px;
         box-sizing: border-box;
         z-index: 1000; 
+        color: white;
     }
     
     .topbarContent{
@@ -42,7 +43,7 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        background-color: #76b947;
+        background-color: #ebebeb;
         padding: 50px;
     }
     
@@ -127,7 +128,7 @@
     }      
 
     .block2{
-        background-color: #b1d8b7;
+        background-color: #0f0f0f;
         padding: 50px;
         display: flex;
         align-items: center;
@@ -176,7 +177,7 @@
     .block2.content{
         height: inherit;        
         overflow-y:scroll;                  
-        padding-top: 200px;
+        padding-top: 350px;
         display: flex;
         flex-direction: column;
         scrollbar-color: rgba(0, 0, 0, 0.5) transparent; /* Thumb color and track color */
@@ -215,7 +216,7 @@
     }
     
     .block3.main{
-        background-color: #94c973;
+        background-color: #d7d7d7;
         display: flex;
         flex-direction: column;
         padding: 50px;
@@ -273,7 +274,7 @@
     
     .block4.main{
         padding: 50px;
-        background-color: #ecf87f;
+        background-color: #eeeeee;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -313,6 +314,7 @@
         height: 50px;
         align-items: center;    
         justify-content: center;
+        background-color: #c3c3c3;
     }
     
     .footerLeft{
