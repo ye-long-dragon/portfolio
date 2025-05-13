@@ -1,3 +1,5 @@
+
+
 function educButtonChange(element) {
     let A1 = document.getElementById("A1");
     let B2 = document.getElementById("B2");
@@ -67,9 +69,9 @@ function educButtonChange(element) {
     if (B2) B2.innerHTML = b2;
     if (C3) C3.innerHTML = c3;
     if (D4) D4.innerHTML = d4;
-}
 
-    
+    activateEducBtn();
+}    
 
 function workButtonChange(element) {
     let A1 = document.getElementById("A1");
@@ -125,6 +127,7 @@ function workButtonChange(element) {
     if (A1) A1.innerHTML = a1;
     if (B2) B2.innerHTML = b2;
     if (C3) C3.innerHTML = c3;
+    
 }
 
 function scrollToSection(id){
@@ -137,3 +140,51 @@ function scrollToSection(id){
     }
    
 }
+
+
+ function loadContent(){
+    const educ = document.getElementById("educ");
+  const work = document.getElementById("work");
+  function activateEduc() {
+      educ.style.backgroundColor = "white";
+      educ.style.color = "black";
+      work.style.backgroundColor = "black";
+      work.style.color = "white";
+      educ.classList.add("active");
+      work.classList.remove("active");
+      educ.style.transitionDuration=".5s";
+      work.style.transitionDuration=".5s";
+      educButtonChange(educ);
+  }
+   function activateWork() {
+      work.style.backgroundColor = "white";
+      work.style.color = "black";
+      educ.style.backgroundColor = "black";
+      educ.style.color = "white";
+      work.classList.add("active");
+      educ.classList.remove("active");
+      educ.style.transitionDuration=".5s";
+      work.style.transitionDuration=".5s";
+      workButtonChange(work);
+  }
+  educ.addEventListener("click", () => {
+      if (!educ.classList.contains("active")) {
+          activateEduc();
+      }
+  });
+  work.addEventListener("click", () => {
+      if (!work.classList.contains("active")) {
+          activateWork();
+      }
+  });
+}
+
+function loadInitial(){
+    loadContent();
+    const educ = document.getElementById("educ");
+    educ.click();
+}
+
+
+
+
