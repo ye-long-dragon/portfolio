@@ -32,6 +32,15 @@
     }
 }
 
+@keyframes animateGrad {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
 @font-face {
     font-family: 'Roboto';
     src: url('Fonts/Roboto/static/Roboto-Black.ttf') format('truetype');
@@ -59,6 +68,21 @@
 
 @media screen and (min-width:1024px) {
     
+    .imgFoot:hover{
+        transform: scale(.5);
+        transition-duration: .5s;
+    }
+
+     .imgFoot:active {
+    transform: scale(1.25);
+    transition-duration: .2s;
+  }
+
+  .footerLeft{
+    font-family: 'Roboto';
+    font-style: normal;
+  }
+
     *{
         padding: 0px;
         margin: 0px;
@@ -107,15 +131,29 @@
 
   
     
-    .name{
-         
-        font-size: 40px ;
-        font-family: sans-serif;
-        font-style: bold;
-   
-        padding: 0px;
-        margin: 0px;
-    }
+    .name {
+    font-size: 40px;
+    font-family: sans-serif;
+    font-weight: bold; /* Use font-weight for bold */
+    padding: 0;
+    margin: 0;
+    color: white; /* Normal text color */
+    transition: all 0.5s ease;
+  }
+
+    .name:hover {
+    background: linear-gradient(to right, #19234d, #4d226c, #7a44c0, #9b58ff, #ca93fd);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animateGrad 2.5s linear infinite;
+    text-decoration: none; /* Ensure no underline on hover */
+}
+
+a {
+    text-decoration: none; /* Remove underline from the link */
+}
     
     .topbarContent.Right{
         margin-left: auto;
@@ -158,8 +196,8 @@
         margin-bottom: auto;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        align-items: flex-start;
+        justify-content: flex-start;
         
         
     }
@@ -196,39 +234,42 @@
     }
 
     .meContainer.pic {
-        position: relative;
-        width: 700px;
-        height: 100px;
-        }
+    position: relative;
+    width: 500px; /* Set to match image width */
+    height: 500px; /* Set a fixed height */
+    overflow: hidden; /* Prevent overflow */
+}
 
-        .meContainer.pic img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: auto;
-        transition: opacity 0.5s ease-in-out;
-        }
+.meContainer.pic img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Set to fixed height */
+    object-fit: cover; /* Maintain aspect ratio */
+    transition: opacity 0.5s ease-in-out;
+}
 
-        /* Initial visibility */
-        .default-img {
-        opacity: 1;
-        z-index: 1;
-        }
+/* Initial visibility */
+.default-img {
+    opacity: 1;
+    z-index: 1;
+}
 
-        .hover-img {
-        opacity: 0;
-        z-index: 2;
-        }
+.hover-img {
+    opacity: 0;
+    z-index: 2;
+}
 
-        /* On hover */
-        .meContainer.pic:hover .hover-img {
-        opacity: 1;
-        }
+/* On hover */
+.meContainer.pic:hover .hover-img {
+    opacity: 1;
+}
 
-        .meContainer.pic:hover .default-img {
-        opacity: 0;
-        }
+.meContainer.pic:hover .default-img {
+    opacity: 0;
+}
+
 
     
     
@@ -238,6 +279,7 @@
         position: relative;
         display: flex;
         z-index: 10;
+        height: 300px;
         flex-direction: column;
     }
     
@@ -336,7 +378,7 @@
     .block2.content{
         height: inherit;        
         overflow-y:scroll;                  
-        padding-top: 200px;
+        padding-top: 30px;
         display: flex;
         flex-direction: column;
         scrollbar-color: rgba(0, 0, 0, 0.5) transparent; /* Thumb color and track color */
@@ -365,7 +407,7 @@
     
     
     .block2.contentContainer{
-        height: inherit;    
+        width: 100%;    
         height: 200px;  
         margin: 0px;   
         padding: 5px;
@@ -408,6 +450,10 @@
         font-style: normal;
         font-size: 14px;    
          
+    }
+
+    .TrueContent{
+        width: 70%;
     }
     
     .line.content{
@@ -513,22 +559,25 @@
         
     }
 
-    .block4.contentContainer{
-        border: 2px solid black;
-        border-radius: 18px;
-        display: flex;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        margin: 20px;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        animation: circleToBox;
-        animation-duration: 3s;
-         animation-timeline:view() ;
-         animation-range: entry 0;  
-       
-        
-    }
+    .block4.contentContainer {
+    border: 2px solid black;
+    border-radius: 18px;
+    display: flex;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: circleToBox;
+    animation-duration: 1s;
+    overflow: hidden; /* Prevent overflow on scale */
+    box-sizing: border-box; /* Include padding and border in width/height */
+    transition: transform 0.3s, background-color 0.3s; /* Smooth transition */
+}
+.block4.contentContainer:hover {
+    transform: scale(1.5);
+    background-color: white;
+}
 
     .block4.contentContainer>div.img{
         animation: fadeIn;
@@ -580,7 +629,7 @@
         padding: 10px;
         display: flex;
         flex-direction: row;
-        height: 50px;
+        height: 80px;
         align-items: center;    
         justify-content: center;
         background-color: #c3c3c3;
@@ -649,15 +698,29 @@
 
   
     
-    .name{
-         
-        font-size: 40px ;
-        font-family: sans-serif;
-        font-style: bold;
-   
-        padding: 0px;
-        margin: 0px;
-    }
+    .name {
+    font-size: 40px;
+    font-family: sans-serif;
+    font-weight: bold; /* Use font-weight for bold */
+    padding: 0;
+    margin: 0;
+    color: white; /* Normal text color */
+    transition: all 0.5s ease;
+  }
+
+    .name:hover {
+    background: linear-gradient(to right, #19234d, #4d226c, #7a44c0, #9b58ff, #ca93fd);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animateGrad 2.5s linear infinite;
+    text-decoration: none; /* Ensure no underline on hover */
+}
+
+a {
+    text-decoration: none; /* Remove underline from the link */
+}
     
     .topbarContent.Right{
         margin-left: auto;
@@ -672,7 +735,7 @@
     section.block1{
         display: flex;
         flex-direction: row;
-        height: 450px;
+        height: 800px;
         justify-content: center;
         align-items: center;
         background-color: #ebebeb;
@@ -738,7 +801,7 @@
     .meContainer.pic {
         position: relative;
         width: 40%;
-        height: auto;
+        height: inherit;
         }
 
         .meContainer.pic img {
@@ -876,7 +939,7 @@
     .block2.content{
         height: inherit;        
         overflow-y:scroll;                  
-        padding-top: 625px;
+        padding-top: 125px;
         display: flex;
         flex-direction: column;
         scrollbar-color: rgba(0, 0, 0, 0.5) transparent; /* Thumb color and track color */
@@ -905,7 +968,7 @@
     
     
     .block2.contentContainer{
-        height: inherit;    
+        width: 100%;    
         height: 300px;  
         margin: 0px;   
         padding: 5px;
@@ -948,6 +1011,10 @@
         font-style: normal;
         font-size: 14px;    
          
+    }
+
+    .TrueContent{
+        width: 70%;
     }
     
     .line.content{
@@ -1055,22 +1122,25 @@
         
     }
 
-    .block4.contentContainer{
-        border: 2px solid black;
-        border-radius: 18px;
-        display: flex;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        margin: 20px;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        animation: circleToBox;
-        animation-duration: 3s;
-         animation-timeline:view() ;
-         animation-range: entry 0;  
-       
-        
-    }
+    .block4.contentContainer {
+    border: 2px solid black;
+    border-radius: 18px;
+    display: flex;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: circleToBox;
+    animation-duration: 1s;
+    overflow: hidden; /* Prevent overflow on scale */
+    box-sizing: border-box; /* Include padding and border in width/height */
+    transition: transform 0.3s, background-color 0.3s; /* Smooth transition */
+}
+.block4.contentContainer:hover {
+    transform: scale(1.5);
+    background-color: white;
+}
 
     .block4.contentContainer>div.img{
         animation: fadeIn;
@@ -1122,11 +1192,25 @@
         padding: 10px;
         display: flex;
         flex-direction: row;
-        height: 50px;
+        height: 80px;
         align-items: center;    
         justify-content: center;
         background-color: #c3c3c3;
     }
+    .imgFoot:hover{
+        transform: scale(.5);
+        transition-duration: .5s;
+    }
+
+     .imgFoot:active {
+    transform: scale(1.25);
+    transition-duration: .2s;
+  }
+
+  .footerLeft{
+    font-family: 'Roboto';
+    font-style: normal;
+  }
     
     .footerLeft{
         margin-right: auto;
@@ -1193,15 +1277,29 @@
 
   
     
-    .name{
-         
-        font-size: 18px ;
-        font-family: sans-serif;
-        font-style: bold;
-   
-        padding: 0px;
-        margin: 0px;
-    }
+    .name {
+    font-size: 18px;
+    font-family: sans-serif;
+    font-weight: bold; /* Use font-weight for bold */
+    padding: 0;
+    margin: 0;
+    color: white; /* Normal text color */
+    transition: all 0.5s ease;
+  }
+
+   .name:hover {
+    background: linear-gradient(to right, #19234d, #4d226c, #7a44c0, #9b58ff, #ca93fd);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animateGrad 2.5s linear infinite;
+    text-decoration: none; /* Ensure no underline on hover */
+}
+
+a {
+    text-decoration: none; /* Remove underline from the link */
+}
     
     .topbarContent.Right{
         margin-left: auto;
@@ -1216,7 +1314,7 @@
     section.block1{
         display: flex;
         flex-direction: row;
-        height: 450px;
+        height: auto;
         justify-content: center;
         align-items: center;
         background-color: #ebebeb;
@@ -1236,7 +1334,8 @@
     
     .meContainer{
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: row;
+        flex-wrap: wrap-reverse;
     }
     
     .meContainer.text{
@@ -1283,42 +1382,56 @@
          
     }
 
-    .meContainer.pic {
-        display: flex;
-        width: 80%;
-        align-items: center;
-        justify-items: center;
-        height: auto;
-        }
+    /* Mobile-first styles for the image container */
+.meContainer.pic {
+    display: flex;
+    width: 100%; /* Full width for mobile */
+    align-items: center;
+    justify-content: center; /* Corrected from justify-items */
+    flex-direction: column;
+    height: 400px;
+    position: relative; /* Added for absolute positioning of images */
+}
 
-        .meContainer.pic img {
-        display: flex;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: auto;
-        transition: opacity 0.5s ease-in-out;
-        }
+/* Styles for images */
+.meContainer.pic img {
+    display: block; /* Changed from flex to block for images */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    transition: opacity 0.5s ease-in-out;
+    position: absolute; /* Added to stack images on top of each other */
+}
 
-        /* Initial visibility */
-        .default-img {
-        opacity: 1;
-        z-index: 1;
-        }
+/* Initial visibility */
+.default-img {
+    opacity: 1;
+    z-index: 1;
+}
 
-        .hover-img {
-        opacity: 0;
-        z-index: 2;
-        }
+.hover-img {
+    opacity: 0;
+    z-index: 2;
+}
 
-        /* On hover */
-        .meContainer.pic:hover .hover-img {
-        opacity: 1;
-        }
+/* On hover */
+.meContainer.pic:hover .hover-img {
+    opacity: 1;
+}
 
-        .meContainer.pic:hover .default-img {
-        opacity: 0;
-        }
+.meContainer.pic:hover .default-img {
+    opacity: 0;
+}
+
+/* Optional: Touch event handling for mobile */
+.meContainer.pic:active .hover-img {
+    opacity: 1; /* Show hover image on touch */
+}
+
+.meContainer.pic:active .default-img {
+    opacity: 0; /* Hide default image on touch */
+}
 
     
     
@@ -1455,7 +1568,7 @@
     
     
     .block2.contentContainer{
-        height: inherit;    
+        width: 100%;    
         height: 600px;  
         margin: 0px;   
         padding: 5px;
@@ -1498,6 +1611,10 @@
         font-style: normal;
         font-size: 14px;    
          
+    }
+
+    .TrueContent{
+        width: 70%;
     }
     
     .line.content{
@@ -1605,22 +1722,25 @@
         
     }
 
-    .block4.contentContainer{
-        border: 2px solid black;
-        border-radius: 18px;
-        display: flex;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        margin: 20px;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        animation: circleToBox;
-        animation-duration: 3s;
-         animation-timeline:view() ;
-         animation-range: entry 0;  
-       
-        
-    }
+    .block4.contentContainer {
+    border: 2px solid black;
+    border-radius: 18px;
+    display: flex;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: circleToBox;
+    animation-duration: 1s;
+    overflow: hidden; /* Prevent overflow on scale */
+    box-sizing: border-box; /* Include padding and border in width/height */
+    transition: transform 0.3s, background-color 0.3s; /* Smooth transition */
+}
+.block4.contentContainer:hover {
+    transform: scale(1.5);
+    background-color: white;
+}
 
     .block4.contentContainer>div.img{
         animation: fadeIn;
@@ -1672,11 +1792,25 @@
         padding: 10px;
         display: flex;
         flex-direction: row;
-        height: 120px;
+        height: 150px;
         align-items: center;    
         justify-content: center;
         background-color: #c3c3c3;
     }
+    .imgFoot:hover{
+        transform: scale(.5);
+        transition-duration: .5s;
+    }
+
+     .imgFoot:active {
+    transform: scale(1.25);
+    transition-duration: .2s;
+  }
+
+  .footerLeft{
+    font-family: 'Roboto';
+    font-style: normal;
+  }
     
     .footerLeft{
         margin-right: auto;

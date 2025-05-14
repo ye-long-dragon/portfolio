@@ -15,7 +15,7 @@ function educButtonChange(element) {
             <div class="place">MAPUA MALAYAN COLLEGES MINDANAO</div>
             <div class="title">COLLEGE - COMPUTER ENGINEERING</div>
             <div class="date">2023 - 2028</div>
-            <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+            <div class="description">Computer Engineering Graduate. Proficient in multiple diffent technologies for WEB, APP, MOBILE DEVELOPMENT, COMPUTER NETWORKS, and EMBEDDED SYSTEMS. </div>
         </div>
     `;
 
@@ -29,7 +29,7 @@ function educButtonChange(element) {
                 <div class="place">MAPUA MALAYAN COLLEGES MINDANAO</div>
                 <div class="title">SENIOR HIGH SCHOOL - STEM</div>
                 <div class="date">2021 - 2023</div>
-                <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                <div class="description">Graduated With Honors. Created a Learning website for a Capstone Project</div>
             </div>
         </div>
     `;
@@ -44,7 +44,7 @@ function educButtonChange(element) {
                 <div class="place">SAN PEDRO COLLEGES BED</div>
                 <div class="title">JUNIOR HIGH SCHOOL</div>
                 <div class="date">2017 - 2020</div>
-                <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                <div class="description">Graduated With High Honors</div>
             </div>
         </div>
     `;
@@ -59,7 +59,7 @@ function educButtonChange(element) {
                 <div class="place">SAN PEDRO COLLEGES BED</div>
                 <div class="title">GRADESCHOOL</div>
                 <div class="date">2012 - 2016</div>
-                <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                <div class="description">Graduated With Highest Honors</div>
             </div>
         </div>
     `;
@@ -87,7 +87,7 @@ function workButtonChange(element) {
             <div class="place">SPACEX</div>
             <div class="title">SOFTWARE ENGINEER</div>
             <div class="date">2029</div>
-            <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+            <div class="description">Contributed to developing mission-critical software systems supporting aerospace technologies and launch operations at SpaceX.</div>
         </div>
     `;
 
@@ -101,7 +101,7 @@ function workButtonChange(element) {
                 <div class="place">GOOGLE</div>
                 <div class="title">A3 SOFTWARE DEVELOPER</div>
                 <div class="date">2030 - 2032</div>
-                <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                <div class="description">Worked on scalable software solutions within Google's A3 division, focusing on advanced algorithmic development and cloud-based services.</div>
             </div>
         </div>
     `;
@@ -116,7 +116,7 @@ function workButtonChange(element) {
                 <div class="place">MICROCOMPUTER SERVICES INC</div>
                 <div class="title">NETWORKS ENGINEER</div>
                 <div class="date">2033</div>
-                <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                <div class="description">Engineered and maintained robust network infrastructures and support systems for enterprise clients at Microcomputer Services Inc in 2033.</div>
             </div>
         </div>
     `;
